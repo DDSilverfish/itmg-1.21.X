@@ -6,6 +6,7 @@ This mod adds Lifesteal features and custom items to the game.
 ### LifeSteal
 - If you kill another player, you get an extra heart and the killed player loses 1.
 - You can craft hearts, although not easy.
+- using /giveHeart you can send a heart to whoever you want.
 - Inspired by [Lifesteal mod by Mian](https://modrinth.com/mod/lifesteal-mian)
 ### Unique Items
 - Timber Axe
