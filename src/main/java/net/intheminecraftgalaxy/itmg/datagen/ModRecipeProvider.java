@@ -117,6 +117,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(Items.IRON_AXE), conditionsFromItem(Items.IRON_AXE))
                         .criterion(hasItem(ModItems.CRAFTING_KEY), conditionsFromItem(ModItems.CRAFTING_KEY))
                         .offerTo(exporter);
+
             }
         };
     }

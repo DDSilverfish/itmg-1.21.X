@@ -11,10 +11,11 @@ public class InTheMinecraftGalaxyConfig {
     public static double heartDamage = 2.0;
     public static double minHeart = 2.0;
     public static double maxHeartItemGen = 20.0;
+    public static double minGiveHeart = 20.0;
 
     public static int timberAxeDurability = 250;
     public static int snowSwordDurability = 10;
-    public static int snowSwordEffectDuration = 10;
+    public static int snowSwordEffectDuration = 100;
     public static int veinMiningPickaxeDurability = 200;
 
     // Load config from file
@@ -33,11 +34,12 @@ public class InTheMinecraftGalaxyConfig {
             heartDamage = Double.parseDouble(properties.getProperty("heartDamage", "2.0"));
             minHeart = Double.parseDouble(properties.getProperty("minHeart", "2.0"));
             maxHeartItemGen = Double.parseDouble(properties.getProperty("maxHeartItemGen", "20.0"));
+            minGiveHeart = Double.parseDouble(properties.getProperty("minGiveHeart", "20.0"));
 
             timberAxeDurability = Integer.parseInt(properties.getProperty("timberAxeDurability", "250"));
 
             snowSwordDurability = Integer.parseInt(properties.getProperty("snowSwordDurability", "10"));
-            snowSwordDurability = Integer.parseInt(properties.getProperty("snowSwordEffectDuration", "50"));
+            snowSwordDurability = Integer.parseInt(properties.getProperty("snowSwordEffectDuration", "100"));
 
             veinMiningPickaxeDurability = Integer.parseInt(properties.getProperty("veinMiningPickaxeDurability", "200"));
         } catch (IOException e) {
@@ -57,6 +59,7 @@ public class InTheMinecraftGalaxyConfig {
         properties.setProperty("heartDamage", Double.toString(heartDamage));
         properties.setProperty("minHeart", Double.toString(minHeart));
         properties.setProperty("maxHeartItemGen", Double.toString(maxHeartItemGen));
+        properties.setProperty("minGiveHeart", Double.toString(minGiveHeart));
 
         properties.setProperty("timberAxeDurability", Integer.toString(timberAxeDurability));
 

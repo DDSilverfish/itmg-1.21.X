@@ -2,14 +2,15 @@ package net.intheminecraftgalaxy.itmg;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.intheminecraftgalaxy.itmg.block.ModBlocks;
 import net.intheminecraftgalaxy.itmg.component.ModDataComponentTypes;
 import net.intheminecraftgalaxy.itmg.item.ModItemGroups;
 import net.intheminecraftgalaxy.itmg.item.ModItems;
 import net.intheminecraftgalaxy.itmg.util.ModLootTableModifiers;
-import net.minecraft.block.Blocks;
-import net.minecraft.loot.LootTable;
-import net.minecraft.registry.RegistryKey;
+import net.minecraft.client.render.entity.EntityRendererFactory;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.player.PlayerEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

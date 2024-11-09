@@ -98,23 +98,23 @@ public class LifeSteal {
                             double giverCurrentMaxHealth = giverHealthAttribute.getBaseValue();
                             double receiverCurrentMaxHealth = receiverHealthAttribute.getBaseValue();
 
-                            if(giverCurrentMaxHealth > InTheMinecraftGalaxyConfig.maxHeartItemGen && receiverCurrentMaxHealth < InTheMinecraftGalaxyConfig.maxHeart && receiver.getName() != giver.getName()) {
-                                giverHealthAttribute.setBaseValue(receiverCurrentMaxHealth - 2);
+                            giver.sendMessage(Text.literal(String.valueOf(receiverCurrentMaxHealth)));
+
+                            if (receiver.getName() == giver.getName()) {
+                                giver.sendMessage(Text.literal("You can only send a heart to another player!"), false);
+                            }
+                            else if(receiverCurrentMaxHealth >= InTheMinecraftGalaxyConfig.maxHeart){
+                                giver.sendMessage(Text.literal(receiver.getName().getString() + " already has the maximum amount of hearts!!"), false);
+                            } else if (giverCurrentMaxHealth <= InTheMinecraftGalaxyConfig.minGiveHeart) {
+                                giver.sendMessage(Text.literal("You don't have enough health to give a heart!"), false);
+                            } else {
+                                giverHealthAttribute.setBaseValue(giverCurrentMaxHealth - 2);
                                 receiverHealthAttribute.setBaseValue(receiverCurrentMaxHealth + 2);
 
                                 giver.sendMessage(Text.literal("You gave 1 heart to " + receiver.getName().getString() + "!"), true);
                                 receiver.sendMessage(Text.literal("You received 1 heart from " + giver.getName().getString() + "!"), true);
 
-                            } else if (receiver.getName() != giver.getName()) {
-                                giver.sendMessage(Text.literal("You can only send a heart to another player!"), false);
-                            } else if (giverCurrentMaxHealth <= InTheMinecraftGalaxyConfig.maxHeartItemGen) {
-                                giver.sendMessage(Text.literal("You don't have enough health to give a heart!"), false);
                             }
-                            else
-                            {
-                                giver.sendMessage(Text.literal(receiver.getName().getString() + " already has the maximum amount of hearts!!"), false);
-                            }
-
                             return 1;
                         })));
     }

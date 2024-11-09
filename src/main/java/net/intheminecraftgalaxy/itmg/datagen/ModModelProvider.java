@@ -2,9 +2,12 @@ package net.intheminecraftgalaxy.itmg.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+
 import net.intheminecraftgalaxy.itmg.block.ModBlocks;
 import net.intheminecraftgalaxy.itmg.item.ModItems;
+
 import net.minecraft.data.client.*;
+
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -31,5 +34,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.MINING_STAFF, Models.HANDHELD);
         itemModelGenerator.register(ModItems.THUNDERBLADE, Models.HANDHELD);
+
     }
 }

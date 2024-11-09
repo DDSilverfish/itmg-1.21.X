@@ -3,6 +3,9 @@ package net.intheminecraftgalaxy.itmg.item;
 import net.intheminecraftgalaxy.itmg.ITMG;
 import net.intheminecraftgalaxy.itmg.item.custom.*;
 import net.minecraft.item.*;
+import net.minecraft.item.equipment.ArmorMaterial;
+import net.minecraft.item.equipment.ArmorMaterials;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
@@ -62,6 +65,8 @@ public class ModItems {
     public static final Item MINING_STAFF = registerItem("mining_staff", new MiningStaffItem(createSettings("mining_staff").maxDamage(32).rarity(Rarity.EPIC)));
 
     public static final Item THUNDERBLADE = registerItem("thunderblade", new ThunderBladeItem(createSettings("thunderblade").maxCount(1).rarity(Rarity.EPIC)));
+
+    // static final Item FIRE_RESISTANCE_HELMET = registerItem("fire_resistance_helmet", new WaterBreathingHelmet(ArmorMaterials.NETHERITE, EquipmentType.HELMET, createSettings("fire_resistance_helmet")));
 
     // Helper method to automatically generate item settings with a registry key
     private static Item.Settings createSettings(String itemName) {

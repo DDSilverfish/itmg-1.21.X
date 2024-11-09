@@ -3,6 +3,8 @@ package net.intheminecraftgalaxy.itmg.util;
 import net.intheminecraftgalaxy.itmg.ITMG;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;

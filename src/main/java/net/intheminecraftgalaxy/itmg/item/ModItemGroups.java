@@ -34,6 +34,7 @@ public class ModItemGroups {
                         entries.add(ModItems.MINING_STAFF);
                         entries.add(ModItems.VEIN_MINING_PICKAXE_ITEM);
                         entries.add(ModItems.THUNDERBLADE);
+                        //entries.add(ModItems.FIRE_RESISTANCE_HELMET);
                     }).build());
 
     public static void registerItemGroups() {
